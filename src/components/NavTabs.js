@@ -1,12 +1,12 @@
 import React from 'react';
 
-export default function NavTabs({ currentPage, handlePageComponent }) {
+export default function NavTabs({ currentPage, handlePageChange }) {
     return (
         <ul className="nav nav-tabs">
             <li className='nav-item'>
                 <a
                   href='#home'
-                  onClick={() => handlePageComponent('Home')}
+                  onClick={() => handlePageChange('Home')}
                   // If the current page is home we set the className to nav-link is active otherwise nav-link
                   className={currentPage === 'Home' ? 'nav-link active' : 'nav-link'}
                 >
@@ -16,7 +16,7 @@ export default function NavTabs({ currentPage, handlePageComponent }) {
             <li className='nav-item'>
                 <a
                   href='#about'
-                  onClick={() => handlePageComponent('About')}
+                  onClick={() => handlePageChange('About')}
                   className={currentPage === 'About' ? 'nav-link active' : 'nav-link'}
                 >
                 About
@@ -25,7 +25,7 @@ export default function NavTabs({ currentPage, handlePageComponent }) {
             <li className='nav-item'>
                 <a
                   href='#blog'
-                  onClick={() => handlePageComponent('Blog')}
+                  onClick={() => handlePageChange('Blog')}
                   className={currentPage === 'Blog' ? 'nav-link active' : 'nav-link'}
                 >
                 Blog
@@ -34,7 +34,7 @@ export default function NavTabs({ currentPage, handlePageComponent }) {
             <li className='nav-item'>
                 <a
                   href='#contact'
-                  onClick={() => handlePageComponent('Contact')}
+                  onClick={() => handlePageChange('Contact')}
                   className={currentPage === 'Contact' ? 'nav-link active' : 'nav-link'}
                 >
                 Contact
