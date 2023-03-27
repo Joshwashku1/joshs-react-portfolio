@@ -29,6 +29,8 @@ export default function PortfolioContainer() {
 
     return (
         <div>
+            {/* Create props to pass into NavTabs */}
+            <NavTabs currentPage={currentPage} handlePageChange={handlePageChange}/>
             {renderPage()}
         </div>
     )
