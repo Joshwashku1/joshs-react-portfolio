@@ -13,17 +13,8 @@ const styles = {
 export default function NavTabs({ currentPage, handlePageChange }) {
     return (
         <header style={styles.headerStyle} className="header">
+            <h1>Joshua Hamann</h1>
             <ul className="nav nav-tabs">
-                <li className='nav-item'>
-                    <a
-                    href='#home'
-                    onClick={() => handlePageChange('Home')}
-                    // If the current page is home we set the className to nav-link is active otherwise nav-link
-                    className={currentPage === 'Home' ? 'nav-link active' : 'nav-link'}
-                    >
-                    Home
-                    </a>
-                </li>
                 <li className='nav-item'>
                     <a
                     href='#about'
@@ -35,11 +26,21 @@ export default function NavTabs({ currentPage, handlePageChange }) {
                 </li>
                 <li className='nav-item'>
                     <a
-                    href='#blog'
-                    onClick={() => handlePageChange('Blog')}
-                    className={currentPage === 'Blog' ? 'nav-link active' : 'nav-link'}
+                    href='#resume'
+                    onClick={() => handlePageChange('Resume')}
+                    // If the current page is home we set the className to nav-link is active otherwise nav-link
+                    className={currentPage === 'Resume' ? 'nav-link active' : 'nav-link'}
                     >
-                    Blog
+                    Resume
+                    </a>
+                </li>
+                <li className='nav-item'>
+                    <a
+                    href='#portfolio'
+                    onClick={() => handlePageChange('Portfolio')}
+                    className={currentPage === 'Portfolio' ? 'nav-link active' : 'nav-link'}
+                    >
+                    Portfolio
                     </a>
                 </li>
                 <li className='nav-item'>
